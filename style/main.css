@@ -1,0 +1,100 @@
+@import "libs/glide.core.min.css";
+@import "libs/glide.theme.min.css";
+
+header{
+  padding: 50px;
+}
+body{
+  width: 902px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  body{
+    width: auto;
+    margin: 10px;
+  }
+}
+
+.item2 { grid-area: image1; }
+.item3 { grid-area: image2; }
+.item5 { grid-area: image3; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'image1 image1 image1 image2 image2'
+    'image1 image1 image1 image3 image3'
+    'image1 image1 image1 image3 image3';
+  gap: 10px;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+    .grid-container {
+      grid-template-areas:
+        'image1'
+        'image2'
+        'image3';
+      grid-template-columns: 1fr;
+    }
+  }
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.individual{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.text{
+    font-weight: bold;
+    color: #575757;
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+.productsection{
+    padding-top: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.inner-container{
+    margin: 0 auto;
+} 
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    margin: 8px;
+    border: 1px solid #e6e8ea;
+    border-radius: 2px;
+}
+
+
+.cost{
+    color: #407ec9;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.prod img{
+    height: auto;
+    width: 100%;
+}
+.product p{
+    font-size: 14px;
+}
+footer{
+    padding: 50px;
+}
+
